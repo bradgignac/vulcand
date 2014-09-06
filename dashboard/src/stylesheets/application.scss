@@ -1,1 +1,124 @@
 @import "bootstrap";
+
+@import "base";
+@import "header";
+@import "content";
+
+// OLD STUFF
+
+.v-filter {
+  margin: 20px inherit;
+}
+
+.v-filter {
+  @include make-row();
+}
+
+.v-filter-select {
+  @include make-md-column(4);
+}
+
+.v-filter-search {
+  @include make-md-column(4);
+  @include make-md-column-offset(4);
+}
+
+.v-overview-requests,
+.v-overview-errors {
+  @include make-md-column(6);
+}
+
+.v-statistic {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-left: 3px solid rgb(220, 75, 53);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  @include clearfix();
+}
+
+.v-statistic-value,
+.v-statistic-unit {
+  width: 150px;
+  text-align: center;
+}
+
+.v-statistic-value {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.v-statistic-unit {
+  color: #999;
+  font-size: 0.9em;
+  font-weight: 300;
+  // text-transform: uppercase;
+}
+
+.v-statistic-graph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // left: 170px;
+  right: 0;
+  bottom: 0;
+}
+
+.graph {
+  margin: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.status {
+  margin: 20px;
+}
+
+.area.requests-total {
+  fill: rgb(220, 255, 220);
+}
+
+.area.requests-failed {
+  fill: rgb(255, 221, 221);
+}
+
+.host-list,
+.location-list,
+.upstream-list,
+.endpoint-list {
+  padding: 0;
+  list-style: none;
+}
+
+.host,
+.location,
+.upstream,
+.endpoint {
+  @include make-row();
+}
+
+.host-name,
+.location-name,
+.upstream-name,
+.endpoint-name {
+  @include make-xs-column(8);
+}
+
+.location-name {
+  text-indent: 20px;
+}
+
+.upstream-name {
+  text-indent: 40px;
+}
+
+.endpoint-name {
+  text-indent: 60px;
+}
+
+.request-rate,
+.failure-rate {
+  @include make-xs-column(2);
+  text-align: right;
+}
+

@@ -2,7 +2,7 @@ SRC_DIRECTORY=src
 DIST_DIRECTORY=dist
 
 
-all: css js html
+all: css js html images
 
 clean:
 	rm -rf $(DIST_DIRECTORY)
@@ -15,6 +15,9 @@ js: .dist
 
 html: .dist
 	node_modules/.bin/html-minifier --config-file config/html-minifier.json $(SRC_DIRECTORY)/index.html > $(DIST_DIRECTORY)/index.html
+
+images: .dist
+	cp -r $(SRC_DIRECTORY)/images/* $(DIST_DIRECTORY)
 
 server: all
 	cd dist && python -m SimpleHTTPServer
