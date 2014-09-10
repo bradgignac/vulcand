@@ -26,7 +26,28 @@
 
   <section class="v-overview">
     <div class="container">
-      Overview
+      <div class="row v-overview-row">
+        <div class="col-md-3">
+          <div class="v-statistic">
+            <div class="v-statistic-label">Requests/Sec</div>
+            <div class="v-statistic-value healthy">300.00</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="v-graph" id="requests-graph"></div>
+        </div>
+      </div>
+      <div class="row v-overview-row">
+        <div class="col-md-3">
+          <div class="v-statistic">
+            <div class="v-statistic-label">Errors/Sec</div>
+            <div class="v-statistic-value unhealthy">2.00</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="v-graph" id="errors-graph"></div>
+        </div>
+      </div>
     </div>
   </section>
 
