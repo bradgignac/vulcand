@@ -11,6 +11,10 @@ a:hover {
   text-decoration: none;
 }
 
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
 .v-table-value {
   width: 150px;
   text-align: right;
